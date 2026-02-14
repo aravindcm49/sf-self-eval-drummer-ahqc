@@ -16,7 +16,6 @@ const SCORE_BY_LEVEL: Record<SkillLevel, number> = {
 type SectionTotal = {
   section: string
   total: number
-  answered: number
   max: number
 }
 
@@ -29,7 +28,6 @@ function App() {
 
   const selectedLevel = currentQuestion ? answers[currentQuestion.id] : undefined
 
-  const answeredCount = Object.keys(answers).length
   const maxScore = QUESTIONS.length * 3
 
   const totalScore = useMemo(
@@ -42,13 +40,12 @@ function App() {
     const grouped = new Map<string, Omit<SectionTotal, 'section'>>()
 
     for (const question of QUESTIONS) {
-      const existing = grouped.get(question.section) ?? { total: 0, answered: 0, max: 0 }
+      const existing = grouped.get(question.section) ?? { total: 0, max: 0 }
       existing.max += 3
 
       const level = answers[question.id]
       if (level) {
         existing.total += SCORE_BY_LEVEL[level]
-        existing.answered += 1
       }
 
       grouped.set(question.section, existing)
@@ -93,9 +90,13 @@ function App() {
   if (isComplete) {
     return (
       <div className="app-shell">
+        <header className="top-navbar" aria-label="Application header">
+          Salesforce Skill Self Evaluation
+        </header>
+
         <Card className="eval-card eval-card--results">
           <header className="results-header">
-            <h1>Salesforce Skill Evaluation</h1>
+            <h1>Evaluation Complete</h1>
             <p className="results-subtitle">Final Score Summary</p>
           </header>
 
@@ -104,19 +105,15 @@ function App() {
             <p className="results-total__score">
               {totalScore} <span>/ {maxScore}</span>
             </p>
-            <p className="results-total__meta">
-              {answeredCount} of {QUESTIONS.length} questions answered
-            </p>
           </section>
 
           <section className="results-section-list">
-            {sectionTotals.map(({ section, total, answered, max }) => (
+            {sectionTotals.map(({ section, total, max }) => (
               <article key={section} className="section-total-card">
                 <p className="section-total-card__name">{section}</p>
                 <p className="section-total-card__score">
                   {total} <span>/ {max}</span>
                 </p>
-                <p className="section-total-card__meta">{answered} answered</p>
               </article>
             ))}
           </section>
@@ -138,6 +135,10 @@ function App() {
 
   return (
     <div className="app-shell">
+      <header className="top-navbar" aria-label="Application header">
+        Salesforce Skill Self Evaluation
+      </header>
+
       <Card className="eval-card">
         <header className="question-header">
           <div className="question-header__topic">
