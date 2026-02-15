@@ -1,0 +1,62 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  validate:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate data alignment
+        run: npm run check:assessment-data
+
+      - name: Enforce paired updates for questions and score matrix
+        run: |
+          set -euo pipefail
+
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          CHANGED_FILES="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")"
+
+          HAS_QUESTIONS=0
+          HAS_MATRIX=0
+
+          if echo "$CHANGED_FILES" | grep -q '^src/data/questions\.json$'; then
+            HAS_QUESTIONS=1
+          fi
+
+          if echo "$CHANGED_FILES" | grep -q '^src/data/score-matrix\.json$'; then
+            HAS_MATRIX=1
+          fi
+
+          if [ "$HAS_QUESTIONS" -ne "$HAS_MATRIX" ]; then
+            echo "PR policy failed: src/data/questions.json and src/data/score-matrix.json must be updated together."
+            echo "Changed files:"
+            echo "$CHANGED_FILES"
+            exit 1
+          fi
+
+          echo "Paired update policy check passed."
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
