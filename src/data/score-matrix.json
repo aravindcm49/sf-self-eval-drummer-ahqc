@@ -1,0 +1,68 @@
+[
+  {
+    "id": "core-platform-knowledge-salesforce-fundamentals",
+    "section": "Core Platform Knowledge",
+    "subSection": "Salesforce Fundamentals",
+    "expected": { "0-3": 6, "3-6": 8, "6-9": 12 }
+  },
+  {
+    "id": "core-platform-knowledge-data-model",
+    "section": "Core Platform Knowledge",
+    "subSection": "Data Model",
+    "expected": { "0-3": 6, "3-6": 8, "6-9": 12 }
+  },
+  {
+    "id": "development-skills-apex-programming",
+    "section": "Development Skills",
+    "subSection": "Apex Programming",
+    "expected": { "0-3": 9, "3-6": 12, "6-9": 16 }
+  },
+  {
+    "id": "development-skills-lightning-components",
+    "section": "Development Skills",
+    "subSection": "Lightning Components",
+    "expected": { "0-3": 9, "3-6": 12, "6-9": 16 }
+  },
+  {
+    "id": "api-and-integration-integration",
+    "section": "API & Integration",
+    "subSection": "Integration",
+    "expected": { "0-3": 4, "3-6": 6, "6-9": 9 }
+  },
+  {
+    "id": "deployment-devops-deployment",
+    "section": "Deployment & DevOps",
+    "subSection": "Deployment",
+    "expected": { "0-3": 4, "3-6": 6, "6-9": 9 }
+  },
+  {
+    "id": "testing-quality-testing",
+    "section": "Testing & Quality",
+    "subSection": "Testing",
+    "expected": { "0-3": 4, "3-6": 6, "6-9": 9 }
+  },
+  {
+    "id": "specialized-knowledge-clouds",
+    "section": "Specialized Knowledge",
+    "subSection": "Clouds",
+    "expected": { "0-3": 2, "3-6": 3, "6-9": 3 }
+  },
+  {
+    "id": "security-security-model",
+    "section": "Security",
+    "subSection": "Security Model",
+    "expected": { "0-3": 9, "3-6": 12, "6-9": 15 }
+  },
+  {
+    "id": "reporting-reports-dashboards",
+    "section": "Reporting",
+    "subSection": "Reports & Dashboards",
+    "expected": { "0-3": 4, "3-6": 6, "6-9": 9 }
+  },
+  {
+    "id": "flows-automation",
+    "section": "Flows",
+    "subSection": "Automation",
+    "expected": { "0-3": 4, "3-6": 5, "6-9": 6 }
+  }
+]
