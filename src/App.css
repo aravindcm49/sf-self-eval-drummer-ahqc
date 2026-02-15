@@ -606,6 +606,17 @@
   justify-content: flex-end;
 }
 
+.community-note {
+  width: min(1080px, 100%);
+  margin: auto 0 0;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted-ink);
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
 @keyframes question-enter {
   from {
     opacity: 0;
@@ -652,6 +663,12 @@
 
   .top-navbar {
     width: 100%;
+  }
+
+  .community-note {
+    width: 100%;
+    font-size: 0.8rem;
+    padding-top: 0.55rem;
   }
 
   .top-navbar__title {

@@ -255,6 +255,12 @@ function App() {
     </header>
   )
 
+  const communityAcknowledgement = (
+    <footer className="community-note" aria-label="Community acknowledgement">
+      Thanks to Chennai Salesforce Trailblazers Community for their guidance.
+    </footer>
+  )
+
   if (isComplete) {
     return (
       <div className={shellClassName}>
@@ -359,6 +365,8 @@ function App() {
             </main>
           </Card>
         </div>
+
+        {communityAcknowledgement}
       </div>
     )
   }
@@ -424,6 +432,8 @@ function App() {
           </main>
         </Card>
       </div>
+
+      {communityAcknowledgement}
     </div>
   )
 }
