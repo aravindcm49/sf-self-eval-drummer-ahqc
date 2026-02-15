@@ -194,29 +194,23 @@ function App() {
     [experienceLevel, resultsSessionSeed, sectionTotals],
   )
 
-  const handleSelect = (level: SkillLevel) => {
-    if (!currentQuestion) {
+  const handleSelect = (questionId: string, questionIndex: number, level: SkillLevel) => {
+    if (!QUESTIONS[questionIndex]) {
       return
     }
 
-    const { id } = currentQuestion
+    const isLastQuestion = questionIndex === QUESTIONS.length - 1
 
-    if (currentIndex === QUESTIONS.length - 1) {
+    if (isLastQuestion) {
       setResultsSessionSeed((previousSeed) => previousSeed + 1)
     }
 
     setAnswers((previous) => ({
       ...previous,
-      [id]: level,
+      [questionId]: level,
     }))
 
-    setCurrentIndex((previousIndex) => {
-      if (QUESTIONS[previousIndex]?.id !== id) {
-        return previousIndex
-      }
-
-      return Math.min(previousIndex + 1, QUESTIONS.length)
-    })
+    setCurrentIndex(Math.min(questionIndex + 1, QUESTIONS.length))
   }
 
   const handleBack = () => {
@@ -406,7 +400,7 @@ function App() {
                     type="button"
                     variant="outline"
                     className={`choice-button ${isActive ? 'choice-button--active' : ''}`}
-                    onClick={() => handleSelect(level)}
+                    onClick={() => handleSelect(currentQuestion.id, currentIndex, level)}
                   >
                     {level}
                   </Button>
