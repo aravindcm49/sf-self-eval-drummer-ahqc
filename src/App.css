@@ -99,10 +99,10 @@
 
 .theme-toggle {
   --toggle-width: 2.5rem;
-  --toggle-height: 1.38rem;
+  --toggle-height: 1.40rem;
   --toggle-thumb-size: 0.92rem;
   --toggle-edge-gap: 0.16rem;
-  --toggle-on-inset: 0.035rem;
+  --toggle-on-inset: 0.12rem;
   --toggle-thumb-travel: calc(var(--toggle-width) - var(--toggle-thumb-size) - (var(--toggle-edge-gap) * 2));
   flex: 0 0 auto;
   width: var(--toggle-width);
