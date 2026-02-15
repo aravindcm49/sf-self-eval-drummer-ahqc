@@ -239,20 +239,24 @@ function App() {
     setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
   }
 
-  const shellClassName = `app-shell ${theme === 'light' ? 'app-shell--light' : ''}`
-  const themeToggleLabel = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+  const isLightTheme = theme === 'light'
+  const shellClassName = `app-shell ${isLightTheme ? 'app-shell--light' : ''}`
+  const themeToggleLabel = isLightTheme ? 'Switch to dark mode' : 'Switch to light mode'
 
   const topNavbar = (
     <header className="top-navbar" aria-label="Application header">
       <span className="top-navbar__title">Salesforce Skill Self Evaluation</span>
       <button
         type="button"
-        className="theme-toggle"
+        className={`theme-toggle ${isLightTheme ? 'theme-toggle--light' : ''}`}
         onClick={toggleTheme}
+        aria-pressed={isLightTheme}
         aria-label={themeToggleLabel}
         title={themeToggleLabel}
       >
-        {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+        <Sun className="theme-toggle__icon theme-toggle__icon--sun" size={12} aria-hidden="true" />
+        <Moon className="theme-toggle__icon theme-toggle__icon--moon" size={12} aria-hidden="true" />
+        <span className="theme-toggle__thumb" aria-hidden="true" />
       </button>
     </header>
   )
