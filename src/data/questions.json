@@ -2,241 +2,241 @@
   {
     "id": "q001",
     "section": "Core Platform Knowledge",
-    "subItem": "Salesforce Fundamentals",
+    "subSection": "Salesforce Fundamentals",
     "question": "Will I be able to explain the difference between standard and custom objects?"
   },
   {
     "id": "q002",
     "section": "Core Platform Knowledge",
-    "subItem": "Salesforce Fundamentals",
+    "subSection": "Salesforce Fundamentals",
     "question": "Will I be able to configure a custom app with tabs and objects?"
   },
   {
     "id": "q003",
     "section": "Core Platform Knowledge",
-    "subItem": "Salesforce Fundamentals",
+    "subSection": "Salesforce Fundamentals",
     "question": "Will I be able to configure OWD correctly?"
   },
   {
     "id": "q004",
     "section": "Core Platform Knowledge",
-    "subItem": "Salesforce Fundamentals",
+    "subSection": "Salesforce Fundamentals",
     "question": "Will I be able to create validation rules from business requirements?"
   },
   {
     "id": "q005",
     "section": "Core Platform Knowledge",
-    "subItem": "Data Model",
+    "subSection": "Data Model",
     "question": "Will I be able to design a schema for a recruitment app?"
   },
   {
     "id": "q006",
     "section": "Core Platform Knowledge",
-    "subItem": "Data Model",
+    "subSection": "Data Model",
     "question": "Will I be able to create a junction object for many-to-many relationships?"
   },
   {
     "id": "q007",
     "section": "Core Platform Knowledge",
-    "subItem": "Data Model",
+    "subSection": "Data Model",
     "question": "Will I be able to explain lookup vs master-detail relationships?"
   },
   {
     "id": "q008",
     "section": "Core Platform Knowledge",
-    "subItem": "Data Model",
+    "subSection": "Data Model",
     "question": "Will I be able to implement roll-up summary fields?"
   },
   {
     "id": "q009",
     "section": "Development Skills",
-    "subItem": "Apex Programming",
+    "subSection": "Apex Programming",
     "question": "Will I be able to write an Apex trigger to update related records?"
   },
   {
     "id": "q010",
     "section": "Development Skills",
-    "subItem": "Apex Programming",
+    "subSection": "Apex Programming",
     "question": "Will I be able to implement a trigger framework for bulk operations?"
   },
   {
     "id": "q011",
     "section": "Development Skills",
-    "subItem": "Apex Programming",
+    "subSection": "Apex Programming",
     "question": "Will I be able to explain governor limits and how to handle them?"
   },
   {
     "id": "q012",
     "section": "Development Skills",
-    "subItem": "Apex Programming",
+    "subSection": "Apex Programming",
     "question": "Will I be able to write a Queueable class for async processing?"
   },
   {
     "id": "q013",
     "section": "Development Skills",
-    "subItem": "Apex Programming",
+    "subSection": "Apex Programming",
     "question": "Will I be able to use custom settings in Apex logic?"
   },
   {
     "id": "q014",
     "section": "Development Skills",
-    "subItem": "Apex Programming",
+    "subSection": "Apex Programming",
     "question": "Will I be able to debug trigger logic?"
   },
   {
     "id": "q015",
     "section": "Development Skills",
-    "subItem": "Lightning Components",
+    "subSection": "Lightning Components",
     "question": "Will I be able to create a simple LWC that displays account details?"
   },
   {
     "id": "q016",
     "section": "Development Skills",
-    "subItem": "Lightning Components",
+    "subSection": "Lightning Components",
     "question": "Will I be able to use wire adapters for dynamic data fetching?"
   },
   {
     "id": "q017",
     "section": "Development Skills",
-    "subItem": "Lightning Components",
+    "subSection": "Lightning Components",
     "question": "Will I be able to explain the difference between Aura and LWC?"
   },
   {
     "id": "q018",
     "section": "Development Skills",
-    "subItem": "Lightning Components",
+    "subSection": "Lightning Components",
     "question": "Will I be able to handle parent-child communication in LWC?"
   },
   {
     "id": "q019",
     "section": "Development Skills",
-    "subItem": "Lightning Components",
+    "subSection": "Lightning Components",
     "question": "Will I be able to implement conditional rendering in LWC?"
   },
   {
     "id": "q020",
     "section": "Development Skills",
-    "subItem": "Lightning Components",
+    "subSection": "Lightning Components",
     "question": "Will I be able to debug LWC issues?"
   },
   {
     "id": "q021",
     "section": "API & Integration",
-    "subItem": "Integration",
+    "subSection": "Integration",
     "question": "Will I be able to call an external REST API from Salesforce?"
   },
   {
     "id": "q022",
     "section": "API & Integration",
-    "subItem": "Integration",
+    "subSection": "Integration",
     "question": "Will I be able to handle authentication using Named Credentials?"
   },
   {
     "id": "q023",
     "section": "API & Integration",
-    "subItem": "Integration",
+    "subSection": "Integration",
     "question": "Will I be able to implement callouts in a batch class?"
   },
   {
     "id": "q024",
     "section": "Deployment & DevOps",
-    "subItem": "Deployment",
+    "subSection": "Deployment",
     "question": "Will I be able to explain steps to deploy metadata using Change Sets?"
   },
   {
     "id": "q025",
     "section": "Deployment & DevOps",
-    "subItem": "Deployment",
+    "subSection": "Deployment",
     "question": "Will I be able to create and deploy unlocked packages using SFDX?"
   },
   {
     "id": "q026",
     "section": "Deployment & DevOps",
-    "subItem": "Deployment",
+    "subSection": "Deployment",
     "question": "Will I be able to configure scratch orgs for development?"
   },
   {
     "id": "q027",
     "section": "Testing & Quality",
-    "subItem": "Testing",
+    "subSection": "Testing",
     "question": "Will I be able to write a test class for an Apex trigger?"
   },
   {
     "id": "q028",
     "section": "Testing & Quality",
-    "subItem": "Testing",
+    "subSection": "Testing",
     "question": "Will I be able to use Test.startTest and Test.stopTest for performance testing?"
   },
   {
     "id": "q029",
     "section": "Testing & Quality",
-    "subItem": "Testing",
+    "subSection": "Testing",
     "question": "Will I be able to implement mocking for callouts in tests?"
   },
   {
     "id": "q030",
     "section": "Specialized Knowledge",
-    "subItem": "Clouds",
+    "subSection": "Clouds",
     "question": "Do I have experience in different clouds?"
   },
   {
     "id": "q031",
     "section": "Security",
-    "subItem": "Security Model",
+    "subSection": "Security Model",
     "question": "Will I be able to differentiate role hierarchy and sharing rules?"
   },
   {
     "id": "q032",
     "section": "Security",
-    "subItem": "Security Model",
+    "subSection": "Security Model",
     "question": "Will I be able to implement field-level security for sensitive data?"
   },
   {
     "id": "q033",
     "section": "Security",
-    "subItem": "Security Model",
+    "subSection": "Security Model",
     "question": "Will I be able to set up permission sets for specific user roles?"
   },
   {
     "id": "q034",
     "section": "Security",
-    "subItem": "Security Model",
+    "subSection": "Security Model",
     "question": "Will I be able to configure session settings for security?"
   },
   {
     "id": "q035",
     "section": "Security",
-    "subItem": "Security Model",
+    "subSection": "Security Model",
     "question": "Will I be able to implement two-factor authentication?"
   },
   {
     "id": "q036",
     "section": "Reporting",
-    "subItem": "Reports & Dashboards",
+    "subSection": "Reports & Dashboards",
     "question": "Will I be able to create a custom report type?"
   },
   {
     "id": "q037",
     "section": "Reporting",
-    "subItem": "Reports & Dashboards",
+    "subSection": "Reports & Dashboards",
     "question": "Will I be able to build a joined report with multiple objects?"
   },
   {
     "id": "q038",
     "section": "Reporting",
-    "subItem": "Reports & Dashboards",
+    "subSection": "Reports & Dashboards",
     "question": "Will I be able to apply dynamic dashboard filters?"
   },
   {
     "id": "q039",
     "section": "Flows",
-    "subItem": "Automation",
+    "subSection": "Automation",
     "question": "Will I be able to create a Flow to update a field based on a condition?"
   },
   {
     "id": "q040",
     "section": "Flows",
-    "subItem": "Automation",
+    "subSection": "Automation",
     "question": "Will I be able to implement a scheduled Flow for nightly updates?"
   }
 ]

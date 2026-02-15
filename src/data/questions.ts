@@ -13,7 +13,7 @@ const toQuestionItem = (value: unknown, index: number): QuestionItem => {
   if (
     !isString(candidate.id) ||
     !isString(candidate.section) ||
-    !isString(candidate.subItem) ||
+    !isString(candidate.subSection) ||
     !isString(candidate.question)
   ) {
     throw new Error(`Invalid question at index ${index}: missing required string fields`)
@@ -22,7 +22,7 @@ const toQuestionItem = (value: unknown, index: number): QuestionItem => {
   return {
     id: candidate.id,
     section: candidate.section,
-    subItem: candidate.subItem,
+    subSection: candidate.subSection,
     question: candidate.question,
   }
 }
